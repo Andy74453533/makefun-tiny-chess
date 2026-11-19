@@ -4,10 +4,12 @@
 [![rank](https://make.fun/badge/tiny-chess-01/Andy74453533/makefun-tiny-chess/rank.svg)](https://make.fun/bounty/tiny-chess-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 [![reward](https://make.fun/badge/tiny-chess-01/Andy74453533/makefun-tiny-chess/reward.svg)](https://make.fun/bounty/tiny-chess-01?utm_source=github&utm_medium=readme&utm_campaign=tiny-chess-01)
 
-A chess engine in 4,096 bytes of Python: a 0x88 board, alpha-beta search with
-a transposition table, quiescence, null-move pruning, late-move reductions,
-history ordering and a tapered piece-square evaluation, searching to a fixed
-node budget per move. No clock, no randomness: the same position always gets
+A chess engine in 4,096 bytes of Python, v2: a 0x88 board, alpha-beta search
+with a transposition table, quiescence, null-move pruning, late-move
+reductions, killer-move and history ordering, and a tapered piece-square
+evaluation, searching to a fixed node budget per move. v2 adds killer moves,
+replace-by-depth TT entries, faster move ordering and evaluation, and a larger
+150,000-node budget. No clock, no randomness: the same position always gets
 the same move, so a trial's live pass and its replay agree. `main.py` is the
 whole engine, packed from its readable source with the kit's `makefun
 compress`; it plays the house gauntlet through the trial env over HTTP.
